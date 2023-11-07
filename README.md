@@ -20,7 +20,7 @@ This repo contains a [Quarto book](https://quarto.org/docs/books/) template for 
 
 ### Copy the repo link (GitHub)
 
-- [ ] 1. Click the green Code button, choose "HTTPS" and copy the link below. It should have the format: https://github.com/[USERNAME]/[REPO NAME].git
+- [ ] 1. Click the green Code button, choose "HTTPS" and copy the link below. It should have the format: https&#xfeff;://github.com/[USERNAME]/[REPONAME].git
 
 ### Clone the repo (RStudio)
 
