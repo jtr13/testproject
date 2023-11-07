@@ -3,9 +3,11 @@ project:
   output-dir: docs
 
 book:
-  title: "YOUR PROJECT TITLE"
-  author: "YOUR NAMES AND UNIS"
-  repo-url: https://github.com/YOUR_GITHUB_ACCOUNT/REPO_NAME
+  title: "Bird Migration"
+  author:
+    - Joyce Robbins jtr13
+    - Alan Glickman
+  repo-url: https://github.com/jtr13/birds
   date: today
   page-footer:
     right: |
