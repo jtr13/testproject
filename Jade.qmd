@@ -1,7 +1,8 @@
 # Jade Chapter
+
+```{r}
 library(tidyverse)
 df <- read_csv("https://data.cityofnewyork.us/resource/8h9b-rp9u.csv")
-```{r}
 str(df)
 ```
 
