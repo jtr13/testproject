@@ -4,5 +4,10 @@ format: html
 editor: visual
 ---
 
-Zirou is testing...
-Second test
+Zirou is testing... Second test
+
+```{r}
+df <- read.csv("data/2021_Public_Data_File_-Student_20260420.csv")
+head(df)
+```
+
