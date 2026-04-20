@@ -1,0 +1,10 @@
+---
+title: "PennyHuang"
+format: html
+---
+
+```{r}
+food <- read.csv("data/Food.csv")
+head(food)
+
+```
