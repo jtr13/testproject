@@ -1,11 +1,8 @@
----
-title: "PennyHuang"
-format: html
----
+# ChapterTitle
 
 ```{r}
-# ChapterTitle
 food <- read.csv("data/Food.csv")
 head(food)
+
 
 ```
