@@ -6,4 +6,4 @@
 .quarto
 .Ruserdata
 testproject.Rproj
-
+*.Rproj
