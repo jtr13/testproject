@@ -1,0 +1,9 @@
+# Charleneeee's Contribution
+
+```{r}
+
+library(readr)
+
+df <- read_csv("data/mydata.csv")
+
+head(df)
