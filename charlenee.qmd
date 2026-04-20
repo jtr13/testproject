@@ -1,5 +1,9 @@
 # Charleneeee's Contribution
 
 ```{r}
-x <- c(2,2,3,3,5)
-mean(x)
+
+library(readr)
+
+df <- read_csv("data/mydata.csv")
+
+head(df)
