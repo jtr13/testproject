@@ -7,3 +7,9 @@
 .Ruserdata
 testproject.Rproj
 *.Rproj
+*_cache/
+*_files/
+_book/
+
+/.quarto/
+**/*.quarto_ipynb
