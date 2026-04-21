@@ -6,3 +6,4 @@ library(readr)
 df <- read_csv("data/nyc_restaurant_sample.csv")
 
 head(df)
+```
