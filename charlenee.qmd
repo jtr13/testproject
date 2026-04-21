@@ -4,6 +4,6 @@
 
 library(readr)
 
-df <- read_csv("data/mydata.csv")
+df <- read_csv("data/nyc_restaurant_sample.csv")
 
 head(df)
