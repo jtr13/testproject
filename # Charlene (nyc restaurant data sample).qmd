@@ -1,7 +1,6 @@
-# Charleneeee's Contribution
+# Charlene (nyc restaurant data sample)
 
 ```{r}
-
 library(readr)
 
 df <- read_csv("data/nyc_restaurant_sample.csv")
