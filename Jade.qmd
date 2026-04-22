@@ -1,9 +1,13 @@
 # Jade Chapter
 
 ```{r}
+#| warining: false
 library(tidyverse)
 df <- read_csv("https://data.cityofnewyork.us/resource/8h9b-rp9u.csv")
 str(df)
+
+df <- df |>
+  rename(Precinct = arrest_precinct)
 ```
 
 ```{r}
@@ -12,5 +16,39 @@ ggplot(df, aes(x = longitude, y = latitude)) +
   geom_point(size = 0.5, aes(color = arrest_boro)) +
   theme_bw()
 ```
+
+```{r}
+#| warning: false
+library(ggplot2)
+library(forcats)
+ggplot(df, aes(y = perp_race)) + 
+  geom_bar(aes(y = fct_rev(fct_infreq(perp_race)), fill = perp_sex))
+```
+
+
+```{r}
+library(tidyverse)
+library(sf)
+library(readxl)
+
+nypp <- read_sf("nypp_25c/nypp.shp")
+
+head(nypp)
+
+ggplot(nypp) +
+  geom_sf() +
+  geom_sf_text(aes(label = Precinct), size = 2) +
+  theme_void()
+
+
+newdata <- left_join(df, nypp) |>
+  select(c("Precinct", "perp_sex", "Shape_Leng", "Shape_Area", "geometry")) |>
+           filter(perp_sex == "M")
+
+```
+
+
+
+
 
 
