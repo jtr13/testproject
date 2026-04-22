@@ -1,12 +1,15 @@
----
-title: "PerpetuaCode"
-format: html
-editor: visual
-embed-resources: true
----
-
 ```{r}
-# My Contribution
-#This is a Quarto document created for the class project.
-summary(cars)
+# Chapter title
+
+
+data <- "https://data.cityofnewyork.us/resource/k46n-sa2m.csv"
+
+
+dhs_data <- read.csv(data)
+
+
+head(dhs_data)
+```
+
+```         
 ```
