@@ -1,5 +1,5 @@
 # Loading Citibike Data 
-```{r, include = False}
+```{r}
 library(tidyverse)
 df <- read_csv("data/JC-202603-citibike-tripdata.csv")
 ```

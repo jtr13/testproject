@@ -11,7 +11,7 @@ book:
   chapters:
     - index.qmd
     - Charlene.qmd
-    - Dany.Rmd
+    - Dany.qmd
     - Jade.qmd
     - Loadingdata.qmd
     - PennyHuang.qmd
