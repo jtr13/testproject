@@ -1,10 +1,4 @@
----
-title: "Upload Data"
-author: "Zirou Liang"
-format: 
-  html:
-    embed-resources: true
----
+# Upload Data
 
 ```{r}
 df <- read.csv("data/2021_Public_Data_File_-Student_20260420.csv")
