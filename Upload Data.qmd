@@ -1,6 +1,5 @@
-# Upload Data
+# Public School Evaluation
 
 ```{r}
 df <- read.csv("data/2021_Public_Data_File_-Student_20260420.csv")
 ```
-
