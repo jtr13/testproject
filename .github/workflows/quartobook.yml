@@ -10,6 +10,8 @@ name: quarto
 
 jobs:
   build-deploy:
+    # Don't run on forked repositories https://beckysweger.com/2025/01/02/skip-a-job-in-a.html
+    if: github.event.repository.fork != true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
