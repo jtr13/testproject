@@ -1,14 +1,5 @@
----
-title: "Abisola's NFH Dataset"
-author: Abisola Sajuyigbe
-format:
-  html:
-    embed-resources: true
-editor_options: 
-  chunk_output_type: console
----
 
-## Loading the Dataset
+# Dataset
 ```{r}
 library(tidyverse)
 
