@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Stat 3702 Project (testing only)",
+    "section": "",
+    "text": "1 Introduction\nThis is a test.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "Charlene.html",
+    "href": "Charlene.html",
+    "title": "2  Charlene (nyc restaurant data sample)",
+    "section": "",
+    "text": "library(readr)\n\ndf &lt;- read_csv(\"data/nyc_restaurant_sample.csv\")\n\nhead(df)\n\n# A tibble: 6 × 27\n     CAMIS DBA         BORO  BUILDING STREET ZIPCODE PHONE `CUISINE DESCRIPTION`\n     &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;                \n1 50164459 The Row Ha… Manh… 2270     ADAM …      NA 6468… &lt;NA&gt;                 \n2 50168743 QINGYUN INC Manh… 367      WEST …   10018 2014… &lt;NA&gt;                 \n3 50180582 GRUHAM FOO… Broo… 100      WILLO…   11201 9087… &lt;NA&gt;                 \n4 50178349 GOOD BAKLA… Manh… 1        HERAL…   10001 6199… &lt;NA&gt;                 \n5 50169251 BARTOLO BA… Manh… 714      11 AV…   10019 9176… &lt;NA&gt;                 \n6 50130631 Yong Sheng… Manh… 2825     FRDRK…      NA 2128… Chinese              \n# ℹ 19 more variables: `INSPECTION DATE` &lt;chr&gt;, ACTION &lt;chr&gt;,\n#   `VIOLATION CODE` &lt;chr&gt;, `VIOLATION DESCRIPTION` &lt;chr&gt;,\n#   `CRITICAL FLAG` &lt;chr&gt;, SCORE &lt;dbl&gt;, GRADE &lt;chr&gt;, `GRADE DATE` &lt;chr&gt;,\n#   `RECORD DATE` &lt;chr&gt;, `INSPECTION TYPE` &lt;chr&gt;, Latitude &lt;dbl&gt;,\n#   Longitude &lt;dbl&gt;, `Community Board` &lt;dbl&gt;, `Council District` &lt;chr&gt;,\n#   `Census Tract` &lt;chr&gt;, BIN &lt;dbl&gt;, BBL &lt;dbl&gt;, NTA &lt;chr&gt;, Location &lt;chr&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Charlene (nyc restaurant data sample)</span>"
+    ]
+  },
+  {
+    "objectID": "Dany.html",
+    "href": "Dany.html",
+    "title": "3  Loading Citibike Data",
+    "section": "",
+    "text": "library(readr)\ndf &lt;- read_csv(\"data/JC-202603-citibike-tripdata.csv\")\nhead(df)  \n\n# A tibble: 6 × 13\n  ride_id          rideable_type started_at          ended_at           \n  &lt;chr&gt;            &lt;chr&gt;         &lt;dttm&gt;              &lt;dttm&gt;             \n1 9AFD73B0B5FF8748 electric_bike 2026-03-06 15:35:01 2026-03-06 16:29:08\n2 D0CBF2632ADAA85B electric_bike 2026-03-06 20:38:36 2026-03-06 20:52:09\n3 86A08062BB25F35D electric_bike 2026-03-20 17:28:48 2026-03-20 17:46:03\n4 68F8E70321348B5B classic_bike  2026-03-04 14:34:57 2026-03-04 14:38:44\n5 4ABA929EBE8489E2 electric_bike 2026-03-23 09:33:33 2026-03-23 09:38:12\n6 6783E8380C16AFAD classic_bike  2026-03-07 12:40:41 2026-03-07 12:59:46\n# ℹ 9 more variables: start_station_name &lt;chr&gt;, start_station_id &lt;chr&gt;,\n#   end_station_name &lt;chr&gt;, end_station_id &lt;chr&gt;, start_lat &lt;dbl&gt;,\n#   start_lng &lt;dbl&gt;, end_lat &lt;dbl&gt;, end_lng &lt;dbl&gt;, member_casual &lt;chr&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Loading Citibike Data</span>"
+    ]
+  },
+  {
+    "objectID": "Jade.html",
+    "href": "Jade.html",
+    "title": "4  Jade Chapter",
+    "section": "",
+    "text": "library(tidyverse)\ndf &lt;- read_csv(\"https://data.cityofnewyork.us/resource/8h9b-rp9u.csv\")\nstr(df)\n\nspc_tbl_ [1,000 × 19] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ arrest_key       : num [1:1000] 2.99e+08 2.99e+08 2.99e+08 2.99e+08 2.99e+08 ...\n $ arrest_date      : POSIXct[1:1000], format: \"2024-12-31\" \"2024-12-31\" ...\n $ pd_cd            : num [1:1000] 113 113 101 109 106 779 748 905 101 203 ...\n $ pd_desc          : chr [1:1000] \"MENACING,UNCLASSIFIED\" \"MENACING,UNCLASSIFIED\" \"ASSAULT 3\" \"ASSAULT 2,1,UNCLASSIFIED\" ...\n $ ky_cd            : num [1:1000] 344 344 344 106 106 126 359 347 344 352 ...\n $ ofns_desc        : chr [1:1000] \"ASSAULT 3 & RELATED OFFENSES\" \"ASSAULT 3 & RELATED OFFENSES\" \"ASSAULT 3 & RELATED OFFENSES\" \"FELONY ASSAULT\" ...\n $ law_code         : chr [1:1000] \"PL 1201401\" \"PL 1201401\" \"PL 1200001\" \"PL 1200502\" ...\n $ law_cat_cd       : chr [1:1000] \"M\" \"M\" \"M\" \"F\" ...\n $ arrest_boro      : chr [1:1000] \"Q\" \"B\" \"S\" \"K\" ...\n $ arrest_precinct  : num [1:1000] 113 42 120 84 6 70 40 10 62 90 ...\n $ jurisdiction_code: num [1:1000] 0 2 0 0 0 0 0 0 0 2 ...\n $ age_group        : chr [1:1000] \"45-64\" \"18-24\" \"18-24\" \"25-44\" ...\n $ perp_sex         : chr [1:1000] \"M\" \"M\" \"M\" \"M\" ...\n $ perp_race        : chr [1:1000] \"BLACK\" \"WHITE HISPANIC\" \"WHITE HISPANIC\" \"BLACK\" ...\n $ x_coord_cd       : num [1:1000] 1049932 1010462 951606 987554 984015 ...\n $ y_coord_cd       : num [1:1000] 193788 243211 168433 190004 205081 ...\n $ latitude         : num [1:1000] 40.7 40.8 40.6 40.7 40.7 ...\n $ longitude        : num [1:1000] -73.8 -73.9 -74.1 -74 -74 ...\n $ lon_lat          : chr [1:1000] \"POINT (-73.763125 40.698345)\" \"POINT (-73.905275 40.834204)\" \"POINT (-74.117602 40.628935)\" \"POINT (-73.988086 40.688203)\" ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   arrest_key = col_double(),\n  ..   arrest_date = col_datetime(format = \"\"),\n  ..   pd_cd = col_double(),\n  ..   pd_desc = col_character(),\n  ..   ky_cd = col_double(),\n  ..   ofns_desc = col_character(),\n  ..   law_code = col_character(),\n  ..   law_cat_cd = col_character(),\n  ..   arrest_boro = col_character(),\n  ..   arrest_precinct = col_double(),\n  ..   jurisdiction_code = col_double(),\n  ..   age_group = col_character(),\n  ..   perp_sex = col_character(),\n  ..   perp_race = col_character(),\n  ..   x_coord_cd = col_double(),\n  ..   y_coord_cd = col_double(),\n  ..   latitude = col_double(),\n  ..   longitude = col_double(),\n  ..   lon_lat = col_character()\n  .. )\n - attr(*, \"problems\")=&lt;externalptr&gt; \n\n\n\nlibrary(ggplot2)\nggplot(df, aes(x = longitude, y = latitude)) +\n  geom_point(size = 0.5, aes(color = arrest_boro)) +\n  theme_bw()",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Jade Chapter</span>"
+    ]
+  },
+  {
+    "objectID": "Loadingdata.html",
+    "href": "Loadingdata.html",
+    "title": "Stat 3702 Project (testing only)",
+    "section": "",
+    "text": "#SchoolSafetyReport\n\nlibrary(tidyverse)\ndf &lt;- read_csv(\"data/schoolsafetyreport.csv\")\n\n\nggplot(df, aes(x = `Borough Name`)) + \n  geom_bar(color = \"blue\", fill = \"blue\") \n\n\n\n\n\n\n\n\n\nggplot(df, aes(x = `Borough Name`, fill = factor(`# Schools`))) + \n  geom_bar(position = \"dodge\")\n\n\n\n\n\n\n\n\n\nggplot(df, aes(fill = `Borough Name`, x = factor(`# Schools`))) + \n  geom_bar(position = \"dodge\") \n\n\n\n\n\n\n\n\n\nggplot(df, aes(x = `AvgOfVio N`, y = `AvgOfNoCrim N`)) + \n  geom_point() +\n  geom_jitter()",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Loadingdata.html</span>"
+    ]
+  },
+  {
+    "objectID": "PennyHuang.html",
+    "href": "PennyHuang.html",
+    "title": "6  ChapterTitle",
+    "section": "",
+    "text": "food &lt;- read.csv(\"data/Food.csv\")\nhead(food)\n\n  Year Neighborhood.Tabulation.Area.NTA.\n1 2025                            BX0401\n2 2025                            BX0303\n3 2025                            MN1102\n4 2025                            BX0602\n5 2025                            BK1204\n6 2025                            BK0503\n  Neighborhood.Tabulation.Area..NTA..Name Supply.Gap..lbs..\n1             Concourse-Concourse Village -102,142.62426294\n2                       Crotona Park East -333,492.64867191\n3                     East Harlem (North)  527,499.52610583\n4                                 Tremont -113,652.81465869\n5                 Mapleton-Midwood (West) 451,455.520860002\n6                  East New York-New Lots -506,273.12917545\n  Food.Insecure.Percentage Unemployment.Rate Vulnerable.Population.Score\n1                   26.29%            10.54%                        0.57\n2                   27.24%            13.09%                        0.55\n3                   26.68%            10.56%                        0.47\n4                   28.96%            12.14%                        0.53\n5                   16.87%             5.65%                        0.61\n6                   20.46%            11.66%                        0.51\n  Weighted.Score Rank\n1       5.133096  161\n2       5.628794  141\n3       5.908840  121\n4       5.711963  134\n5       5.731608  132\n6       5.110412  162",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>ChapterTitle</span>"
+    ]
+  },
+  {
+    "objectID": "ShrinaCoolItProject.html",
+    "href": "ShrinaCoolItProject.html",
+    "title": "7  Cool It Dataset",
+    "section": "",
+    "text": "df &lt;- read.csv(\"data/Cool_It_Dataset.csv\")\nhead(df)\n\n       System      DF.Activated FountainType FountainCount Painted\n1 B001-DF0207         Activated            A             1    true\n2 B002-DF0731            Broken            E             1    true\n3 B002-DF0732            Broken            E             1    true\n4 B007-DF0754 UnderConstruction     CS Metal             1   false\n5 B007-DF0756 UnderConstruction            A             1    true\n6 B007-DF0757 UnderConstruction            A             1    true\n  Filter.Installed                    Position Outdoor GISPropNum\n1            false   Under Tree, In Playground    true       B001\n2            false                 Out in Open    true       B002\n3            false     Under Tree, Out in Open    true       B002\n4            false                    In Shade    true       B007\n5             true  Out in Open, In Playground    true       B007\n6             true Near Ballfield, Out in Open    true       B007\n         PropertyName OMPPropID             SubPropertyName ParkDistrict\n1 American Playground      B001                                     B-01\n2      Amersfort Park      B002                                     B-18\n3      Amersfort Park      B002                                     B-18\n4    Bensonhurst Park      B007                                     B-11\n5    Bensonhurst Park   B007-01 Bensonhurst Park Playground         B-11\n6    Bensonhurst Park      B007                                     B-11\n  Borough      AMPSID AMPSClass AMPSStatus AMPSParentID\n1       B 100,037,676  DRINKFTN          D         B001\n2       B 100,039,159  DRINKFTN          I         B002\n3       B 100,039,177  DRINKFTN          I         B002\n4       B 100,039,198  DRINKFTN          I         B007\n5       B 100,039,249  DRINKFTN          I      B007-01\n6       B 100,039,244  DRINKFTN          I         B007\n                                        AMPSName CommunityBoard CouncilDistrict\n1                          A-American Playground            301              33\n2                               E-Amersfort Park            318              45\n3                               E-Amersfort Park            318              45\n4                      CS Metal-Bensonhurst Park            311              43\n5 A-Bensonhurst Park-Bensonhurst Park Playground            311              43\n6                             A-Bensonhurst Park            311              43\n  Precinct ZIPCode                  x                 y\n1       94  11,222  995,853.631964474 204,780.745671972\n2       63  11,210 1,001,205.71968546 168,004.324802398\n3       63  11,210 1,001,167.86936746 168,468.868820816\n4       62  11,214   984,267.19581981 157,078.860104814\n5       62  11,214  984,301.209531307 156,806.697591394\n6       62  11,214  983,842.562154635 156,796.758306816\n\nnrow(df)\n\n[1] 3871\n\nncol(df)\n\n[1] 25",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Cool It Dataset</span>"
+    ]
+  }
+]
