@@ -1,4 +1,8 @@
 # Introduction 
 
-This is a test.
+This is the introduction.
+
+```{r}
+print("hello, world")
+```
 

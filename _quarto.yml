@@ -1,7 +1,5 @@
 project:
   type: book
-  resources:
-    - CNAME
 
 book:
   title: "Stat 3702 Project (testing only)"
@@ -19,6 +17,8 @@ book:
     - PennyHuang.qmd
     - ShrinaCoolItProject.qmd
     - Abisola.qmd
+    - ziroudata.qmd
+    - Alexander.qmd
   
 format:
   html:
