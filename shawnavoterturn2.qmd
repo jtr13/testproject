@@ -1,10 +1,4 @@
----
-title: "shawnavoterqmd"
-format: html
-editor: visual
----
-
-# shawna voters
+# shawnavotes
 
 ```{r}
 library(readr)
@@ -15,5 +9,5 @@ data <- read_csv("Historical_Voter_Turnout_20260422.csv")
 head(data)
 
 ggplot(data, aes(x = Year)) +
-  geom_bar()
+  geom_bar(fill = "lightblue")
 ```
