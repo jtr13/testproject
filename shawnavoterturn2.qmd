@@ -9,5 +9,5 @@ data <- read_csv("data/shawnavoterdata.csv")
 head(data)
 
 ggplot(data, aes(x = Year)) +
-  geom_bar(fill = "lightblue")
+  geom_bar(fill = "lightgreen")
 ```
