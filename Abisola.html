@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Cool It Dataset – Stat 3702 Project (testing only)</title>
+<title>8&nbsp; Dataset – Stat 3702 Project (testing only)</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Abisola.html" rel="next">
-<link href="./PennyHuang.html" rel="prev">
+<link href="./ziroudata.html" rel="next">
+<link href="./ShrinaCoolItProject.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -120,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ShrinaCoolItProject.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cool It Dataset</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Abisola.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Dataset</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -186,13 +186,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ShrinaCoolItProject.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ShrinaCoolItProject.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cool It Dataset</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Abisola.html" class="sidebar-item-text sidebar-link">
+  <a href="./Abisola.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Dataset</span></span></a>
   </div>
 </li>
@@ -221,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cool It Dataset</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Dataset</span></h1>
 </div>
 
 
@@ -239,59 +239,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/Cool_It_Dataset.csv"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>NFH_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://data.cityofnewyork.us/resource/r3dx-pew9.csv"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(NFH_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       System      DF.Activated FountainType FountainCount Painted
-1 B001-DF0207         Activated            A             1    true
-2 B002-DF0731            Broken            E             1    true
-3 B002-DF0732            Broken            E             1    true
-4 B007-DF0754 UnderConstruction     CS Metal             1   false
-5 B007-DF0756 UnderConstruction            A             1    true
-6 B007-DF0757 UnderConstruction            A             1    true
-  Filter.Installed                    Position Outdoor GISPropNum
-1            false   Under Tree, In Playground    true       B001
-2            false                 Out in Open    true       B002
-3            false     Under Tree, Out in Open    true       B002
-4            false                    In Shade    true       B007
-5             true  Out in Open, In Playground    true       B007
-6             true Near Ballfield, Out in Open    true       B007
-         PropertyName OMPPropID             SubPropertyName ParkDistrict
-1 American Playground      B001                                     B-01
-2      Amersfort Park      B002                                     B-18
-3      Amersfort Park      B002                                     B-18
-4    Bensonhurst Park      B007                                     B-11
-5    Bensonhurst Park   B007-01 Bensonhurst Park Playground         B-11
-6    Bensonhurst Park      B007                                     B-11
-  Borough      AMPSID AMPSClass AMPSStatus AMPSParentID
-1       B 100,037,676  DRINKFTN          D         B001
-2       B 100,039,159  DRINKFTN          I         B002
-3       B 100,039,177  DRINKFTN          I         B002
-4       B 100,039,198  DRINKFTN          I         B007
-5       B 100,039,249  DRINKFTN          I      B007-01
-6       B 100,039,244  DRINKFTN          I         B007
-                                        AMPSName CommunityBoard CouncilDistrict
-1                          A-American Playground            301              33
-2                               E-Amersfort Park            318              45
-3                               E-Amersfort Park            318              45
-4                      CS Metal-Bensonhurst Park            311              43
-5 A-Bensonhurst Park-Bensonhurst Park Playground            311              43
-6                             A-Bensonhurst Park            311              43
-  Precinct ZIPCode                  x                 y
-1       94  11,222  995,853.631964474 204,780.745671972
-2       63  11,210 1,001,205.71968546 168,004.324802398
-3       63  11,210 1,001,167.86936746 168,468.868820816
-4       62  11,214   984,267.19581981 157,078.860104814
-5       62  11,214  984,301.209531307 156,806.697591394
-6       62  11,214  983,842.562154635 156,796.758306816</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3871</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 25</code></pre>
+<pre><code># A tibble: 6 × 52
+  year_published  puma borough neighborhoods        cd     join nyc_poverty_rate
+           &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;                &lt;chr&gt; &lt;dbl&gt;            &lt;dbl&gt;
+1           2020  3701 Bronx   Riverdale, Fieldsto… BX C…  3701            0.152
+2           2020  3701 Bronx   Riverdale, Fieldsto… BX C…  3701            0.152
+3           2020  3701 Bronx   Riverdale, Fieldsto… BX C…  3701            0.152
+4           2020  3701 Bronx   Riverdale, Fieldsto… BX C…  3701            0.152
+5           2020  3701 Bronx   Riverdale, Fieldsto… BX C…  3701            0.152
+6           2020  3701 Bronx   Riverdale, Fieldsto… BX C…  3701            0.152
+# ℹ 45 more variables: median_income &lt;dbl&gt;, perc_white &lt;dbl&gt;, perc_black &lt;dbl&gt;,
+#   perc_asian &lt;dbl&gt;, perc_other &lt;dbl&gt;, perc_hispanic &lt;dbl&gt;, goal &lt;chr&gt;,
+#   goalname &lt;chr&gt;, goalfullname &lt;chr&gt;, totaloutcome &lt;dbl&gt;, goalrank &lt;chr&gt;,
+#   indexscore &lt;dbl&gt;, scorerank &lt;chr&gt;, ind1 &lt;chr&gt;, ind1outcome &lt;chr&gt;,
+#   ind1rank &lt;dbl&gt;, ind1definition &lt;chr&gt;, ind2 &lt;chr&gt;, ind2outcome &lt;dbl&gt;,
+#   ind2rank &lt;dbl&gt;, ind2definition &lt;chr&gt;, ind3 &lt;chr&gt;, ind3outcome &lt;dbl&gt;,
+#   ind3rank &lt;dbl&gt;, ind3definition &lt;chr&gt;, ind4 &lt;chr&gt;, ind4outcome &lt;chr&gt;, …</code></pre>
 </div>
 </div>
 
@@ -700,13 +669,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./PennyHuang.html" class="pagination-link" aria-label="ChapterTitle">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ChapterTitle</span></span>
+      <a href="./ShrinaCoolItProject.html" class="pagination-link" aria-label="Cool It Dataset">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cool It Dataset</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Abisola.html" class="pagination-link" aria-label="Dataset">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Dataset</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ziroudata.html" class="pagination-link" aria-label="Public School Evaluation">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Public School Evaluation</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -715,4 +684,4 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/jtr13/testproject/blob/main/ShrinaCoolItProject.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/jtr13/testproject/edit/main/ShrinaCoolItProject.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/jtr13/testproject/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/jtr13/testproject/blob/main/Abisola.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/jtr13/testproject/edit/main/Abisola.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/jtr13/testproject/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
