@@ -16,7 +16,9 @@ book:
     - Loadingdata.qmd
     - PennyHuang.qmd
     - ShrinaCoolItProject.qmd
+    - Abisola.qmd
     - ziroudata.qmd
+    - Alexander.qmd
   
 format:
   html:
