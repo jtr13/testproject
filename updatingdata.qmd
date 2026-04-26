@@ -1,0 +1,12 @@
+---
+title: "updatingdata"
+format: html
+editor: visual
+---
+
+```{r}
+df <- read.csv("data/MTA_Subway_Delay-Causing_Incidents__Beginning_2020_20260413.csv
+               ")
+head(df)
+```
+
