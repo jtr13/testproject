@@ -1,7 +1,76 @@
-# SchoolSafetyReport
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+# Affordable Housing
+## Introduction
+I selected this data set because I wanted to learn more about the distribution of affordable housing in New York City. I want to learn more about where affordable housing is offered throughout the different boroughs. I'm curious to see if there are concentrations of affordable housing in certain areas. There are 2 different programs that have ocurred between 2014 and today. Housing New York plan (1/1/2014-12/31/2021) and the Housing Our Neighbors: A Blueprint for Housing & Homelessness plan (1/1/2022-present). These plans help to improve the quality of housing, support people experiencing homelessness, and increase homeownership opportunities.  Source: https://www.nyc.gov/site/hpd/about/housing-blueprint.page
+
+## Data
+### Description
+This data is collected through various Housing Preservation and Development programs. Each row contains one buildings in a specific housing development or preservation project. Each column contains details about the location of the building,  when construction occurred on the building, details about the number of units divided into income level, and the number of bedrooms. This dataset is 8,983 rows and 41 columns. It is updated quarterly and was last updated March 20th, 2026. 
+
+This data does duplicate buildings if it was involved in multiple projects. There are also some projects that were created to assist homeowners or special populations that are marked CONFIDENTIAL so we don't have all of the data for certain projects. In addition many of the projects are still in progress so there is no building completion or project completion date. 
+
+### Missing Value Analysis
+
+
 ```{r}
 library(tidyverse)
-df <- read_csv("data/schoolsafetyreport.csv")
+df <- read_csv("data/affordablehousing.csv")
+```
+
+```{r}
+library(redav)
+plot_missing(df, num_char = 10, max_cols = 13, max_rows = 5)
+```
+From this graph, we can see that a majority of the columns with missing data contain no information about the location of the project, but do have a date project and building completion date. This helps to verify the statement in the introduction of the data set that there are projects labeled as "CONFIDENTIAL" with redacted information. The next row with the most missing data is those with information about the location but no project and building completion date. 
+```{r}
+missing <- df |> filter(is.na(`Building ID`)) |> pivot_longer(cols = c(`Counted Rental Units`, `Counted Homeownership Units`), names_to = "Type", values_to = "Counted Units") |> aggregate(`Counted Units` ~ Type, FUN = sum)
+ggplot(missing, aes(x = Type, y = `Counted Units`)) + 
+  geom_col()
+
+```
+
+From this graph we can see that a majority of the projects with missing data are projects that involve homeownership units. This also helps us to verify the statement provided in the data set introduction that some information was redacted because it was related to homeownership. 
+```{r}
+missing_rental <- df |> filter(is.na(`Building ID`),`Counted Rental Units` > 0 ) |> select(`Extremely Low Income Units`:`Other Income Units`) |> pivot_longer(cols = c(`Extremely Low Income Units` : `Other Income Units`), names_to = "Income", values_to = "Counted Units") |> aggregate(`Counted Units`~ Income, FUN = sum)
+ggplot(missing_rental, aes(y = fct_reorder(Income, `Counted Units`), x = `Counted Units`)) + 
+  geom_col()
+```
+From the introduction we know that some information was considered confidential because it was related to a "special population". Based on our graph of the rental units with redacted information based on income level, we can see that a majority of the rental units with redacted information are "Extremely Low Income Units".
+
+maybe also need to add one about dates i lowkey dont know just be like oh these started more recently so they're not done duh
+
+
+## Results
+### Question 1
+Distribution of location of housing across neighborhoods
+```{r}
+library(sf)
+boroughs <- read_sf("data/nyc_boroughs/nybbwi.shp")
+plot_data <- left_join(boroughs, df)
+ggplot() + 
+  geom_sf(data = boroughs) + 
+  geom_point(data = df, aes(x = Longitude, y = Latitude)) + 
+  coord_sf()
+
+```
+
+### Question 2
+income level per borough dots on a map
+
+
+### Question 3
+
+
+## Conclusion
+```{r}
+library(tidyverse)
+df <- read_csv("data/affordablehousing.csv")
+
+
 ```
 
 ```{r}
