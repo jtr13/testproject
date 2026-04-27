@@ -1,8 +1,17 @@
-# ChapterTitle
+# All about fooooood
 
 ```{r}
+library(tidyverse)
+library(sf)
 food <- read.csv("data/Food.csv")
 head(food)
+Neighborhood <- read.csv("data/2020_Neighborhood_Tabulation_Areas_(NTAs)_20260422.csv")
+Neighborhood <- Neighborhood |> rename(geometry = the_geom)
+data <- food |> left_join(Neighborhood, by = c("Neighborhood.Tabulation.Area.NTA." = "NTA2020"))
 
+data |> ggplot() + 
+  geom_sf() + 
+  geom_sf_text(aes(label = Neighborhood.Tabulation.Area.NTA.), size = 3) + 
+  scale_fill_distiller(palette = "Greens", direction = 1) 
 
 ```
