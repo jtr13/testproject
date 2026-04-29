@@ -3,7 +3,7 @@
 ```{r}
 #| warining: false
 library(tidyverse)
-df <- read_csv("https://data.cityofnewyork.us/resource/uip8-fykc.csv")
+df <- read_csv("https://data.cityofnewyork.us/resource/uip8-fykc.csv", na = c("(null)", ""))
 str(df)
 
 df <- df |>
