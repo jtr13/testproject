@@ -1,0 +1,54 @@
+# Cool It Dataset
+
+## Introduction
+I chose the Cool It! NYC 2020 - Drinking Fountains dataset because I noticed the lack of working water fountains in the city, especially around parks. I enjoy running and a few weeks ago, I was running on a trail alongside the Hudson River. I didn't bring my water bottle because it was extra weight, and halfway through my run, the heat was getting to me so I needed water. However, all 5 water fountains I stopped at didn't work. This made me think how dangerous this could be, especially in the summer with high temperatures and extreme heat. The fact that 5 consecutive water fountains were broken made me curious whether this was a mere coincidence or part of a larger pattern that I could trace with the rest of the water fountains in NYC. 
+
+## Data
+### Description
+This dataset gives information about drinking fountains that were activated as a part of Cool It! NYC, which was a "citywide plan to increase the amount of cooling features avaiable to the public during heat emergencies." It's one of three datasets as part of this initiative -- the other two represent Spray Showers and Cooling Sites. The data was gathered by the NYC Department of Parks and Recreation (DPR), and the dataset is formatted into 25 columns, with each of the 3871 rows representing a unique drinking fountain. Some key columns or variable include DF Activated (activated; not yet activated; broken; under construction), FountainType, FountainCount (# of times it was fixed), and Borough. It's important to note that this data is from 2020 and has not been updated since so any changes since 11/27/2020 will not be reflected. 
+
+### Missing Value Analysis
+```{r}
+cool <- read.csv("data/Cool_It_Dataset.csv", na.strings = "")
+
+library(redav)
+plot_missing(cool, num_char = 2)
+
+plot_missing(cool)
+
+plot_missing(cool, max_cols = 3)
+# Decreased number of columns/variables but it looks like there are repeating patterns when they're actually distinct -- the other categories just don't show 
+
+
+# subproperty name is missing
+
+```
+
+## Results
+### Question 1
+```{r}
+# heatmap of longitude/latitude
+broken <- cool |>
+  filter(DF.Activated == "Broken")
+
+ggplot(broken, aes(x = x, y = y)) +
+  geom_bin_2d() +
+  coord_fixed() +
+  scale_fill_distiller(palette = "Reds",
+                       direction = 1) +
+  theme_classic(20)
+
+# want to make the longitude/latitude continuous instead of categorical like they are now
+# also fix axes...
+
+
+```
+
+
+### Question 2
+
+
+### Question 3
+
+
+## Conclusion
