@@ -29,7 +29,7 @@ plot_missing(cool, max_cols = 3)
 ```{r}
 # heatmap of longitude/latitude
 broken <- cool |>
-  filter(DF.Activated == "Broken")
+  dplyr::filter(DF.Activated == "Broken")
 
 ggplot(broken, aes(x = x, y = y)) +
   geom_bin_2d() +
