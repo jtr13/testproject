@@ -10,6 +10,7 @@ book:
   repo-actions: [source, edit, issue]
   chapters:
     - index.qmd
+    - shawnavoterturn2.qmd
     - Charlene.qmd
     - Dany.qmd
     - Jade.qmd
