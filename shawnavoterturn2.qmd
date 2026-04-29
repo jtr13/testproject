@@ -1,0 +1,128 @@
+# shawnavote
+
+## Introduction
+
+### Data
+
+```{r}
+library(readr)
+library(ggplot2)
+
+data <- read_csv("data/shawnavoterdata.csv")
+
+head(data)
+
+ggplot(data, aes(x = Year)) +
+  geom_bar(fill = "lightgreen")
+```
+
+```{r}
+ggplot(data, aes(x = Geo_Unit, y = Turnout)) +
+  geom_col(fill = "lightblue") +
+  labs(
+    x = "Assembly District",
+    y = "Turnout",
+    title = "Voter Turnout by Assembly District"
+  )
+```
+
+```{r}
+head (data)
+
+dim(data)
+
+```
+
+```{r}
+
+library(sf)
+library(tigris)
+library(ggplot2)
+library(dplyr)
+```
+
+```{r}
+map_data <- ny_assembly |>
+  mutate(Geo_Unit = as.character(SLDLST)) |>
+  left_join(data, by = "Geo_Unit") |>
+  mutate(turnout_group = cut(
+    Turnout,
+    breaks = c(0, 0.05, 0.1, 0.2, 1),
+    labels = c("Very Low", "Low", "Moderate", "High"),
+    include.lowest = TRUE
+  ))
+
+ggplot(map_data) +
+  geom_sf(aes(fill = turnout_group), color = "white") +
+  scale_fill_manual(
+    values = c(
+      "Very Low" = "#E5F5E0",   
+      "Low" = "#A1D99B",       
+      "Moderate" = "#31A354",  
+      "High" = "#00441B"
+    ),
+    na.value = "lightgrey"
+  ) +
+  coord_sf(
+    xlim = c(-74.3, -73.65),
+    ylim = c(40.45, 40.95),
+    expand = FALSE
+  ) +
+  labs(
+    title = "NYC Voter Turnout: Missing Data Included",
+    fill = "Turnout Level"
+  ) +
+  theme_minimal()
+```
+
+Perceptually uniform?
+
+Indicates that turnout is low to moderate in NYC. High turnout concentrated is sporadic areas of Manhattan and Brooklyn/Queens. Overall, these areas are centralized around the denser populated regions. The outer boroughs are lower in their levels of turnout.
+
+### Data Description
+
+### Missing Value Analysis
+
+```{r}
+library(remotes)
+
+
+library(redav)
+plot_missing(mtcars)
+```
+
+```{r}
+colSums(is.na(data))
+
+```
+
+This can be likely attributed to districts not reporting their data.
+
+```{r}
+library(tidyverse)
+
+voterdata <- data |>
+  rownames_to_column("id") |>
+  pivot_longer(cols = -id,
+               values_transform = list(value = as.character)) |>
+  mutate(missing = ifelse(is.na(value), "yes", "no"))
+
+ggplot(voterdata, aes(x = name, y = id, fill = missing)) +
+  geom_tile() +
+  scale_fill_viridis_d() +
+  labs(title = "Voter Data with NAs") +
+  theme_bw() +
+  theme(axis.text.y = element_blank(),
+        axis.ticks.y = element_blank())
+```
+
+```{r}
+library(mi)
+library(dplyr)
+plot_missing (data, percent = FALSE)
+plot_missing (data)
+```
+
+### Results
+
+### Conclusion
