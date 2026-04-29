@@ -1,8 +1,3 @@
----
-output: html_document
-editor_options: 
-  chunk_output_type: console
----
 # Affordable Housing
 ## Introduction
 I selected this data set because I wanted to learn more about the distribution of affordable housing in New York City. I want to learn more about where affordable housing is offered throughout the different boroughs. I'm curious to see if there are concentrations of affordable housing in certain areas. There are 2 different programs that have ocurred between 2014 and today. Housing New York plan (1/1/2014-12/31/2021) and the Housing Our Neighbors: A Blueprint for Housing & Homelessness plan (1/1/2022-present). These plans help to improve the quality of housing, support people experiencing homelessness, and increase homeownership opportunities.  Source: https://www.nyc.gov/site/hpd/about/housing-blueprint.page
