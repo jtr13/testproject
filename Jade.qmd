@@ -144,5 +144,4 @@ plot_missing(df_new, max_rows = 20)
 
 
 plot_missing(df, num_char = 1)
-```6re
-
+```
