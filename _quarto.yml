@@ -10,6 +10,7 @@ book:
   repo-actions: [source, edit, issue]
   chapters:
     - index.qmd
+    - shawnavoterturn2.qmd
     - charlene_nyc_restaurant_data_sample.qmd
     - Dany.qmd
     - Jade.qmd
