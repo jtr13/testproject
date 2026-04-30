@@ -10,6 +10,7 @@ book:
   repo-actions: [source, edit, issue]
   chapters:
     - index.qmd
+    - updatingdata.qmd
     - shawnavoterturn2.qmd
     - charlene_nyc_restaurant_data_sample.qmd
     - Dany.qmd
@@ -30,7 +31,6 @@ format:
 knitr:
   opts_chunk: 
     fig.align: center
-    out.width: 70%
     
     
 execute:
