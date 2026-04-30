@@ -37,8 +37,15 @@ ggplot(missing_rental, aes(y = fct_reorder(Income, `Counted Units`), x = `Counte
 From the introduction we know that some information was considered confidential because it was related to a "special population". Based on our graph of the rental units with redacted information based on income level, we can see that a majority of the rental units with redacted information are "Extremely Low Income Units".
 
 maybe also need to add one about dates i lowkey dont know just be like oh these started more recently so they're not done duh
-
-
+```{r}
+unfinished <- df |> filter(is.na(`Project Completion Date`)) |> mutate(`Project Start Date` = as.Date(`Project Start Date`, format = "%m/%d/%Y")) |> mutate(`Project Start Date` = format(`Project Start Date`, "%Y")) |> count(`Project Start Date`, name = "unfinished count")
+finished <- df |> filter(!is.na(`Project Completion Date`)) |> mutate(`Project Start Date` = as.Date(`Project Start Date`, format = "%m/%d/%Y")) |> mutate(`Project Start Date` = format(`Project Start Date`, "%Y")) |> count(`Project Start Date`, name = "finished count")
+compare <- left_join(unfinished, finished)
+compare <- pivot_longer(compare, cols = `unfinished count`:`finished count`, names_to = "done", values_to = "count")
+ggplot(compare, aes(x = `Project Start Date`, y = count, fill = done)) + 
+  geom_col()
+```
+should i switch the counts to be percentages? and maybe flip the colors
 ## Results
 ### Question 1
 Distribution of location of housing across neighborhoods
