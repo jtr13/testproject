@@ -10,14 +10,8 @@ book:
   repo-actions: [source, edit, issue]
   chapters:
     - index.qmd
-    - Charlene.qmd
-    - Dany.Rmd
-    - Jade.qmd
-    - Loadingdata.qmd
-    - PennyHuang.qmd
-    - ShrinaCoolItProject.qmd
-    - ziroudata.qmd
-  
+    - updatingdata.qmd
+
 format:
   html:
     theme: [default, style/edav3.scss]
