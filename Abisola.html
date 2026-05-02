@@ -251,28 +251,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>NFH_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://data.cityofnewyork.us/resource/r3dx-pew9.csv"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(NFH_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 52
-  year_published  puma borough neighborhoods        cd     join nyc_poverty_rate
-           &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;                &lt;chr&gt; &lt;dbl&gt;            &lt;dbl&gt;
-1           2020  3701 Bronx   Riverdale, Fieldsto… BX C…  3701            0.152
-2           2020  3701 Bronx   Riverdale, Fieldsto… BX C…  3701            0.152
-3           2020  3701 Bronx   Riverdale, Fieldsto… BX C…  3701            0.152
-4           2020  3701 Bronx   Riverdale, Fieldsto… BX C…  3701            0.152
-5           2020  3701 Bronx   Riverdale, Fieldsto… BX C…  3701            0.152
-6           2020  3701 Bronx   Riverdale, Fieldsto… BX C…  3701            0.152
-# ℹ 45 more variables: median_income &lt;dbl&gt;, perc_white &lt;dbl&gt;, perc_black &lt;dbl&gt;,
-#   perc_asian &lt;dbl&gt;, perc_other &lt;dbl&gt;, perc_hispanic &lt;dbl&gt;, goal &lt;chr&gt;,
-#   goalname &lt;chr&gt;, goalfullname &lt;chr&gt;, totaloutcome &lt;dbl&gt;, goalrank &lt;chr&gt;,
-#   indexscore &lt;dbl&gt;, scorerank &lt;chr&gt;, ind1 &lt;chr&gt;, ind1outcome &lt;chr&gt;,
-#   ind1rank &lt;dbl&gt;, ind1definition &lt;chr&gt;, ind2 &lt;chr&gt;, ind2outcome &lt;dbl&gt;,
-#   ind2rank &lt;dbl&gt;, ind2definition &lt;chr&gt;, ind3 &lt;chr&gt;, ind3outcome &lt;dbl&gt;,
-#   ind3rank &lt;dbl&gt;, ind3definition &lt;chr&gt;, ind4 &lt;chr&gt;, ind4outcome &lt;chr&gt;, …</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `library()`:
+! there is no package called 'tidyverse'</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>NFH_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://data.cityofnewyork.us/resource/r3dx-pew9.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `read_csv()`:
+! could not find function "read_csv"</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(NFH_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'NFH_data' not found</code></pre>
 </div>
 </div>
 
